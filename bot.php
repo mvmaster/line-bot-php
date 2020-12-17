@@ -67,13 +67,13 @@
 	 else if($message == "groupid?"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = $arrayJson['source']['groupId'];;
+        $arrayPostData['messages'][0]['text'] = $arrayJson['events'][0]['source']['groupId'];;
         replyMsg($arrayHeader,$arrayPostData);
     }
 		 else if($message == "userid?"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = $arrayJson['source']['userId'];;
+        $arrayPostData['messages'][0]['text'] = $arrayJson['events'][0]['source']['userId'];;
         replyMsg($arrayHeader,$arrayPostData);
     }
 	
