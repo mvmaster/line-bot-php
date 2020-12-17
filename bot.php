@@ -64,6 +64,20 @@
         $arrayPostData['messages'][1]['stickerId'] = "131";
         replyMsg($arrayHeader,$arrayPostData);
     }
+	 else if($message == "groupid?"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = $arrayJson['source']['groupId'];;
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+		 else if($message == "userid?"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = $arrayJson['source']['userId'];;
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+	
+	$event['source']['userId'];
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
         $ch = curl_init();
