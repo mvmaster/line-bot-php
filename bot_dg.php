@@ -427,6 +427,7 @@ if(!is_null($events)){
         }
     }
 }
+}
   
 $response = $bot->replyMessage($replyToken,$replyData);
 if ($response->isSucceeded()) {
