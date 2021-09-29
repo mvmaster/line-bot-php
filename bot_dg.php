@@ -364,7 +364,7 @@ if(!is_null($events)){
                 switch ($userMessage) {
                   
 					case  'สวัสดี':
-					 $textReplyMessage = 'สวัสดีครับ คุณ '.$userData['displayName'];     
+					 $textReplyMessage = "สวัสดีครับ คุณ ".$userData['displayName'];     
                         $replyData = new TextMessageBuilder($textReplyMessage); 
 
 					break;
